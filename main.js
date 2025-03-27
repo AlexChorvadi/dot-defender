@@ -3,9 +3,10 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const resetButton = document.getElementById('resetButton');
 const pauseButton = document.getElementById('pauseButton');
+const controlsHeight = document.getElementById("controls").offsetHeight;
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight - controlsHeight;
 
 let animationFrameId; // Store the current animation frame ID
 let highScore = localStorage.getItem("highScore") || 0;
